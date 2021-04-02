@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        do {
+            alert('Enter 1 for Addition 2 for subtraction')
+            var n = prompt('1 or 2')
+            var e = eval(n)
+            var a = prompt('enter 1st number')
+            var b = prompt('enter 2nd number')
+            switch(e) {
+                case 1: var sum=eval(a)+eval(b)
+                        alert('sum is '+sum)
+                        break
+                case 2: var sub=eval(a)-eval(b)
+                        alert('difference is '+sub)
+                        break
+                default: alert('Wrong choice')
+                        break    
+            }
+            var val=confirm('Continue or finish')
+        } while(val)
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate() {
+        var user = document.getElementById('user').value
+        var pwd = document.getElementById('pwd').value
+        if(user.length==0) {
+            document.getElementById('e1').innerHTML = 'Username is required'
+            document.getElementById('e2').innerHTML = ''
+            //alert('Please enter username')
+            return false
+        } else if(pwd.length==0) {
+            document.getElementById('e2').innerHTML = 'Password is required'
+            document.getElementById('e1').innerHTML = ''
+            //alert('Please enter password')
+            return false
+        } else {
+            return true
+        }
+    }
+    </script>
+</head>
+<body>
+    <div>
+        <h2>Login Page Validation using JAvaScript</h2>
+        <form action="home.html" onsubmit="return validate()" >
+            <label>Login</label>:
+            <input type="text" name="user" id="user" />
+            <span id="e1" style="color: red;"></span>
+            <br/>
+            <label>Password</label>:
+            <input type="password" name="pwd" id="pwd" />
+            <span id="e2" style="color: red;"></span>
+            <br/>
+            <input type="submit" value="submit" />
+            <input type="reset" />
+        </form>
+    </div><br/>
+
+    <div>
+        <h2>Login Page Validation using HTML5</h2>
+        <form action="home.html" >
+            <label>Login</label>:
+            <input type="text" name="user" id="user" required /><br/>
+            <label>Password</label>:
+            <input type="password" name="pwd" id="pwd" required />
+            <br/>
+            <input type="submit" value="submit" />
+            <input type="reset" />
+        </form>
+    </div>
+</body>
+</html>

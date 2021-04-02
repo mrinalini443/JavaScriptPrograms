@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add() {
+        var a = document.getElementById('num1').value
+        var b = document.getElementById('num2').value
+        
+            var sum = eval(a)+ eval(b)
+            document.getElementById('res').value = sum
+            document.getElementById('num1').value=''
+            document.getElementById('num2').value=''
+            
+        }
+        function sub() {
+        var a = document.getElementById('num1').value
+        var b = document.getElementById('num2').value
+        
+            var sub = eval(a)-eval(b)
+            document.getElementById('res').value = sub
+            document.getElementById('num1').value=''
+            document.getElementById('num2').value=''
+        }
+    </script>
+</head>
+<body>
+    1st number:<input type="text" name="num1" id="num1" /><br/>
+    2nd number:<input type="text" name="num2" id="num2" /><br/>
+    Result:<input type="text" name="res" id="res" /><br/>
+    <input type="button" value="add" onclick="add()" />
+    <input type="button" value="sub" onclick="sub()" />
+</body>
+</html>
