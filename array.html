@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+       var i=0
+       var arr=[10,50,20,30]
+       var arr1=new Array()
+       var arr2= new Array(20,10,40,50)
+       document.write(arr+'<br/>')
+       document.write(arr.length+'<br/>')
+       document.write(arr1.length+'<br/>')
+       document.write(arr2.length+'<br/>')
+       arr2.push(30)
+       arr2.push(90)
+       document.write(arr2.length+'<br/>')
+       arr2.sort()
+       document.write(arr2+'<br/>')
+       arr1.sort()
+       arr2.reverse()
+       document.write(arr2+'<br/>')
+       document.write(arr2.join(';')+'<br/>')
+       for(i=0;i<arr2.length;i++) {
+           document.write(arr2[i]+'<br/>')
+       }
+   </script>
+</body>
+</html>

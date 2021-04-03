@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .classInfo {
+            background-color: beige;
+            font-weight: bold;
+            font-size: large;
+            text-align: center;
+        }
+    </style>
+    <script>
+        var finalSal = 0
+        function applyStyle() {
+            var divMain = document.getElementById("main")
+            divMain.setAttribute('class','classInfo') 
+        }
+        function store() {
+            var id= document.getElementById('empId').value
+            var name = document.getElementById('empName').value
+            var sal = document.getElementById('empSal').value
+            var des = document.getElementById('empDes').value
+
+            var pNode = document.createElement('p')
+            var textNode = document.createTextNode(id)
+            pNode.setAttribute('style','color:blue')
+            pNode.appendChild(textNode)
+
+            var pNode1 = document.createElement('p')
+            var textNode1 = document.createTextNode(name)
+            pNode1.appendChild(textNode1)
+
+            var pNode2 = document.createElement('p')
+            var textNode2 = document.createTextNode(sal)
+            pNode2.appendChild(textNode2)
+
+            var pNode3 = document.createElement('p')
+            var textNode3 = document.createTextNode(des)
+            pNode3.appendChild(textNode3)
+
+            var divMain = document.getElementById("main")
+            divMain.appendChild(pNode)
+            divMain.appendChild(pNode1)
+            divMain.appendChild(pNode2)
+            divMain.appendChild(pNode3)
+            
+            if(textNode3.textContent=='manager') {
+                finalSal = 5000 + eval(sal)
+                textNode2.textContent = finalSal
+            } else if(des=='programmer') {
+                finalSal = 3000 + eval(sal)
+            } else {
+                finalSal = 1500 + eval(sal)
+            }
+            textNode2.textContent = finalSal
+
+            document.getElementById('empId').value=''
+            document.getElementById('empName').value=''
+            document.getElementById('empSal').value=''
+            document.getElementById('empDes').value=''
+        }
+    </script>
+</head>
+<body>
+    Id:<input type="text" name="empId" id="empId" /><br/>
+    Name:<input type="text" name="empName" id="empName" /><br/>
+    Salary:<input type="text" name="empSal" id="empSal" /><br/>
+    Designation:<input type="text" name="empDes" id="empDes" /><br/>
+    <input type="button" value="Store" onclick="store()" />
+    <input type="button" value="Apply Style" onclick="applyStyle()" />
+    <br/><br/>
+
+   <div id="main">
+
+   </div>
+</body>
+</html>
